@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+</head>
+<body>
+
+
+<div class="wrapper" id="wrapper">
+
+    <div class="leftBlock thing">
+            <div class="formGroup">
+                <label for="adress" class="controlLabel">Адресс</label>
+                <div class="inputPlace">
+                    <input type="text" id="adress" class="formControl" placeholder="Rokossovskogo 76-196" value="Rokossovskogo 76-196">
+                </div>
+            </div>
+
+            <div class="formGroup">
+                <label for="rooms" class="controlLabel">Колличество комнат</label>
+                <div class="inputPlace">
+                    <input type="number" id="rooms" class="formControl" placeholder="4">
+                </div>
+            </div>
+
+            <div class="formGroup">
+                <label for="window" class="controlLabel">Колличество окон</label>
+                <div class="inputPlace">
+                    <input type="number" id="window" class="formControl" placeholder="8">
+                </div>
+            </div>
+
+            <div class="formGroup">
+                <label for="sizeA" class="controlLabel">Длинна стены А</label>
+                <div class="inputPlace">
+                    <input type="number" id="sizeA" class="formControl" placeholder="5 метров">
+                </div>
+            </div>
+
+            <div class="formGroup">
+                <label for="sizeB" class="controlLabel">Длинна стены B</label>
+                <div class="inputPlace">
+                    <input type="number" id="sizeB" class="formControl" placeholder="5 метров">
+                </div>
+            </div>
+
+        <div class="btnPadd">
+                <input type="submit" value="Записать" id="btnSave" class="btnSize" onclick=""/>
+                <input type="submit" value="Редактировать" id="btnSaveCr" class="btnSize" onclick="btnSaveCreate()"/>
+        </div>
+
+    </div>
+    <div class="rightBlock thing" id="inform">Подробная информация</div>
+
+</div>
+
+<div class="btnCrud" id="btnCrud">
+    <input type="submit" value="C R U D" id="btnCreate" class="btnProp"/>
+</div>
+
+<div class="tblInner">
+    <div class="container">
+        <table id="tblList" class="tblList table"></table>
+    </div>
+</div>
+
+<!-- Goods JavaScript -->
+<script type="text/javascript" src="js/houseBase.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
