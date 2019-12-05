@@ -40,51 +40,19 @@ function List() {
                 <th>Выполнить до</th>
                 <th>Дней до выполнения</th>
                 <th>Удалить</th>
-
-            </tr>
-            <tr class="taskRow">
-                <td class="task">Зашить носки(пример)</td>
-                <td>23-11-2019</td>
-                <td>10</td>
-                <td>
-                    <div class="text-center">
-                        <i class="fa fa-times-circle  colorIcon btnDelete" title='Delete'></i>
-                    </div>
-                </td>
-            </tr>
-            <tr class="taskRow">
-                <td class="task">Отжать Бабки(пример)</td>
-                <td>23-11-2019</td>
-                <td>10</td>
-                <td>
-                    <div class="text-center">
-                        <i class="fa fa-times-circle  colorIcon btnDelete" title='Delete'></i>
-                    </div>
-                </td>
-            </tr>
-            <tr class="taskRow">
-                <td class="task">Позвонить маме(пример)</td>
-                <td>23-11-2019</td>
-                <td>10</td>
-                <td>
-                    <div class="text-center">
-                        <i class="fa fa-times-circle  colorIcon btnDelete" title='Delete'></i>
-                    </div>
-                </td>
-            </tr>
-            </tr>
-            <tr class="taskRow">
-                <td class="task">Одеть шапку(пример)</td>
-                <td>23-11-2019</td>
-                <td>10</td>
-                <td>
-                    <div class="text-center">
-                        <i class="fa fa-times-circle  colorIcon btnDelete" title='Delete'></i>
-                    </div>
-                </td>
-            </tr>
             `;//Добавить таблицу в структуру HTML
 
+
+function getTimeRemaining(endtime){
+    let t = Date.parse(endtime) - Date.parse(new Date());
+    let seconds = Math.floor( (t/1000) % 60 );
+    let minutes = Math.floor( (t/1000/60) % 60 );
+    let hours = Math.floor( (t/(1000*60*60)) % 24 );
+    let days = Math.floor( t/(1000*60*60*24) );
+
+    return {t, days, hours, minutes, seconds
+    };
+}
 
 //---------------------------------------------------Date
 
@@ -92,23 +60,21 @@ function List() {
         let info = tblInfo[i];
 
         let date = info.dateArea;
-        date = date.split("-").reverse().join("-");// разобрать , реверс и собрать
+        date = date.split("T").reverse().join(" ");// разобрать , реверс и собрать
 
         let diffDays = "";
         if (date === ""){
             diffDays = "Укажите дату";
-        } else {
-            let date3 = info.dateArea;
-            let date1 = new Date(date3);
-            let date2 = new Date();
-            diffDays = parseInt((date1 - date2) / (1000 * 60 * 60 * 24)) + 1;
         }
 
+        console.log(date);
         tblInn.innerHTML += `
                <tr class="taskRow">
                 <td class="task">${info.textArea}</td>
                 <td class="date">${date}</td>
-                <td>${diffDays}</td>
+                <td> ${getTimeRemaining(date).days} дней
+                ${getTimeRemaining(date).hours}:${getTimeRemaining(date).minutes}:${getTimeRemaining(date).seconds}</td>
+                
                  <td>
                     <div class="text-center">
                         <i class="fa fa-times-circle colorIcon btnDelete" title="Delete${i}" onclick="del(this)" ></i>
@@ -148,5 +114,14 @@ btnSave.addEventListener('click', function () {
 
 
 window.onload = function () {
-    List();
+
+    setTimeout(function run() {
+        List();
+        setTimeout(run, 1000);
+    }, 1000);
 };
+
+
+//----------------------------------------
+
+
