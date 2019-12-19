@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'MgOpenModata';
+    font-style: normal;
+    font-weight: normal;
+    src: local('MgOpenModata Regular'), url('./mgopen.woff') format('woff');
+    }
+
+@font-face {
+    font-family: 'MgOpenModata Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('MgOpenModata Bold'), url('./mgopen-bold.woff') format('woff');
+}
