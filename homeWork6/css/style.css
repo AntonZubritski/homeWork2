@@ -1,3 +1,6 @@
+body{
+	margin: 0;
+}
 header{
 	border-bottom: #1c7430 1px solid;
 }
@@ -85,6 +88,10 @@ button {
 	width: 50%;
 	font-size: 12px;
 }
+.formGroup select {
+	width: 51%;
+	font-size: 12px;
+}
 .formGroupDiv{
 	width: 50%;
 	font-size: 20px;
@@ -105,4 +112,34 @@ ul li i {
 	background-color: white;
 	box-shadow: 8px 4px 27px 22px #ffffff;
 	color: rgba(0, 0, 0, 0.76);
+}
+
+
+.weather {
+	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+	text-shadow: 0.1em 0.1em 0 rgba(0,0,0,0.3);
+	display: flex;
+	align-items: center;
+	padding: 0 20% 0 20%;
+	height: 35vh;
+	background-size: cover;
+
+	border-top: 2px solid transparent;
+	border-bottom: 1px solid transparent;
+	border-image:linear-gradient(90deg, rgb(23, 131, 99),
+	rgb(27, 27, 27) 50%, rgb(23, 131, 99) 100%) 1;
+
+}
+.temp {
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+	font-size: 5em;
+}
+.new_route{
+	color: rgb(16, 69, 51);
+}
+footer{
+	bottom: 0;
 }

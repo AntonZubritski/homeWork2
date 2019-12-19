@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Первый урок</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cloud.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
 </head>
 
@@ -16,8 +17,8 @@
     <header>
         <section class="top1">
             <div class="new_route">
-                <h1>Минск <i class="fas fa-arrows-alt-h"></i> Москва</h1>
-                <p>7 &nbsp;&mdash; 10 декабря</p>
+                <h1>Route List</h1>
+                <!--<p>7 &nbsp;&mdash; 10 декабря</p>-->
             </div>
         </section>
 
@@ -26,14 +27,26 @@
 
             <div class="add_route" id="addRoute">
                 <ul class="ulList">
-                    <li class="formGroup">Введите путь: <input id="input" type="text"  placeholder="Минск-Москва"></li>
-                    <li class="formGroup">Откуда отправляемся: <input type="text" placeholder="Минск"></li>
-                    <li class="formGroup">Куда отправляемся: <input type="text" placeholder="Москва"></li>
-                    <li class="formGroup">Время отправления: <input type="time" placeholder="13:00"></li>
-                    <li class="formGroup">Время прибытия: <input type="time" placeholder="21:00"></li>
-                    <li class="formGroup">Дата отправления: <input type="date" placeholder="25.04.2009"></li>
-                    <li class="formGroup">Дата прибытия: <input type="date" placeholder="26.04.2009"></li>
-                    <li class="formGroup">Стоимость билета <input type="number"  placeholder="20$"></li>
+                    <li class="formGroup">Введите путь: <input id="way" type="text" value="Лучший путь" placeholder="Минск-Москва"></li>
+                    <li class="formGroup">Откуда отправляемся:
+                        <label for="wayIn"></label>
+                        <select id="wayIn">
+
+
+                        </select>
+                    </li>
+                    <li class="formGroup">Куда отправляемся:
+                        <label for="wayTo"></label>
+                        <select id="wayTo">
+
+
+                        </select>
+                    </li>
+                    <li class="formGroup">Время отправления: <input type="time" id="timeIn" placeholder="13:00"></li>
+                    <li class="formGroup">Время прибытия: <input type="time" id="timeTo" placeholder="21:00"></li>
+                    <li class="formGroup">Дата отправления: <input type="date" id="dateIn" placeholder="25.04.2009"></li>
+                    <li class="formGroup">Дата прибытия: <input type="date" id="dateTo" placeholder="26.04.2009"></li>
+                    <li class="formGroup">Стоимость билета <input type="number" id="cost" value="0" placeholder="20$"></li>
                     <li class="formGroup formGroupB" id="angellist" value="0">Избранное
                         <div class="formGroupDiv">
                             <i class="fa fa-angellist fa-star-color " id="angellistI"></i>
@@ -68,6 +81,13 @@
         </table>
     </section>
 
+    <footer>
+        <div id="weather" class="weather" style="background-image: unset">
+            <!--Inner Weather-->
+        </div>
+    </footer>
+
+    <script src="./cityBase.js"></script>
     <script src="./script.js"></script>
 </body>
 
