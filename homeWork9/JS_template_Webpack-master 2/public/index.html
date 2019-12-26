@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ROUTE</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cloud.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+<header>
+    <section class="top1">
+        <div class="new_route">
+            <h1>ROUTE LIST</h1>
+            <!--<p>7 &nbsp;&mdash; 10 декабря</p>-->
+        </div>
+    </section>
+
+    <section class="btnAdd">
+        <button id="btn" class="btnRoute">+ Добавить новый путь</button>
+
+        <div class="add_route" id="addRoute">
+            <ul class="ulList">
+                <li class="formGroup">Введите путь: <input id="way" type="text" value="Лучший путь" placeholder="Минск-Москва"></li>
+                <li class="formGroup">Откуда отправляемся:
+                    <label for="wayIn"></label>
+                    <select id="wayIn">
+
+
+                    </select>
+                </li>
+                <li class="formGroup">Куда отправляемся:
+                    <label for="wayTo"></label>
+                    <select id="wayTo">
+
+
+                    </select>
+                </li>
+                <li class="formGroup">Время отправления: <input type="time" id="timeIn" placeholder="13:00"></li>
+                <li class="formGroup">Время прибытия: <input type="time" id="timeTo" placeholder="21:00"></li>
+                <li class="formGroup">Дата отправления: <input type="date" id="dateIn" placeholder="25.04.2009"></li>
+                <li class="formGroup">Дата прибытия: <input type="date" id="dateTo" placeholder="26.04.2009"></li>
+                <li class="formGroup">Стоимость билета <input type="number" id="cost" value="20" placeholder="20$"></li>
+                <li class="formGroup formGroupB" id="angellist" value="0">Избранное
+                    <div class="formGroupDiv">
+                        <i class="fa fa-angellist fa-star-color " id="angellistI"></i>
+                    </div>
+                </li>
+                <li><button id="btnSave">Записать</button></li>
+            </ul>
+        </div>
+
+    </section>
+</header>
+
+<section class="top2" id="table">
+    <div class="btnGroupe">
+        <button id="firstTable1" class="tabActive">Главное табло</button>
+        <button id="firstTable2" class="tab">Ждут отправления</button>
+        <button id="firstTable3" class="tab">Отправленные</button>
+    </div>
+    <table>
+        <thead class="colorTableTitle">
+        <tr>
+            <th>№</th>
+            <th>Путь</th>
+            <th>Отправляется из</th>
+            <th>Отправляется в</th>
+            <th>Время и дата отправления</th>
+            <th>Время и дата прибытия</th>
+            <th>Стоимость Билета</th>
+            <th>Удалить</th>
+        </tr>
+        </thead>
+
+        <tbody id="tbody">
+        <!--Inner HTML-->
+        </tbody>
+
+    </table>
+</section>
+
+<footer>
+    <div id="weather" class="weather" style="background-image: unset">
+        <!--Inner Weather-->
+    </div>
+</footer>
+<!---------------------->
+<section class="top3" id="top3">
+    <div class="picFlickrButton">
+        <input id="search" type="text" value="" placeholder="search text" />
+        <button id="submitFlickr" class="btnRoute">ИСКАТЬ</button>
+    </div>
+    <div id="outputDiv" class="outputImg shuffle">
+    </div>
+</section>
+<!---------------------->
+
+<script src="./bundle.js"></script>
+</body>
+
+</html>
