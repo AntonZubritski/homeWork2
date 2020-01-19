@@ -1,3 +1,4 @@
+//Бывший sidebar - переделал на css : hover
 let dataToggle = document.getElementById("sidebarToggle");
 function sidebar(){
     let sidebar = document.getElementById("sidebar");

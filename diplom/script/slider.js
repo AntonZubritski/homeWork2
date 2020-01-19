@@ -1,6 +1,3 @@
-// $(document).ready(function(){
-//     $('.slider').bxSlider();
-// });
 
 $('.slider').bxSlider({
     auto: true,
@@ -8,30 +5,21 @@ $('.slider').bxSlider({
     // adaptiveHeight:true,
 });
 
-// $('.main .sliderSale').bxSlider({
-//     auto: true,
-//     pager: false,
-//     pagerEl: false,
-//     adaptiveHeight: true,
-//     autoHover: true,
-// });
-
-
-    $('.main_slider ul').bxSlider({
-        pager: false,
-        controls: false,
-        mode: 'fade',
-        auto: true,
-        pause: 2000,
-        adaptiveHeight: true,
-        touchEnabled: false
-    });
+$('.main_slider ul').bxSlider({
+    pager: false,
+    controls: false,
+    mode: 'fade',
+    auto: true,
+    pause: 2000,
+    adaptiveHeight: true,
+    touchEnabled: false
+});
 
 
 $(function() {
-    let pull 		= $('#pull');
-    menu 		= $('nav ul');
-    menuHeight	= menu.height();
+    let pull = $('#pull');
+    menu = $('nav ul');
+    menuHeight= menu.height();
 
     $(pull).on('click', function(e) {
         e.preventDefault();

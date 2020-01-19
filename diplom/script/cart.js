@@ -1,13 +1,11 @@
 let container = document.querySelector('#contentContainer');
 let containerFooter = document.getElementById('contentConteinerFooter');
-
 let arrayCount = [];
 let cartCountStor = '';
 let cartCountStorSplit = 0;
-
 let fill2 = localStorage.getItem("filmArray");
 let filmArray2 = JSON.parse(fill2);
-console.log(filmArray2);
+
 
 
 // счетчик товаров и запись в local storage
@@ -77,7 +75,7 @@ if (localStorage.getItem('Key') !== null) {
         arrayCount = cartCountStorSplit;
     }
 }
-//DElete
+//DElETE
 let del = e => {
     let id = e.getAttribute('data-id');
     console.log(id);

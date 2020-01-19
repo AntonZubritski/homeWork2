@@ -4,21 +4,21 @@ let searchfield = document.getElementById('searchfield');
 
 let rus =  `ru`;
 let eng = `en-Us`;
+
+//рендер категорий фильмов по id из 'base.js'
 function renderCategory () {
     filterCategory.innerHTML = '';
-
     genres.map((category, index) => {
-
         filterCategory.innerHTML += `
                         <option value="${category.id}">${category.name}</option>
 
 `
     });
-
 }
 
 renderCategory();
 
+//api на SEARCH
 newArraySearch = [];
 let jsonFilmSearch = async () => {
 
@@ -48,12 +48,11 @@ let jsonFilmSearch = async () => {
 
 };
 
-
+//работа по нажатию на клавишу Enter и промис на обработку вернувшегося массива 'newArraySearch' и рендер на страницу
 searchfield.addEventListener("keydown", (e) => {
     if (e.which === 13) {
         new Promise((resolve) => {
             resolve (jsonFilmSearch());
-
         })
             .then(() => {
                 console.log(newArraySearch);
@@ -62,17 +61,14 @@ searchfield.addEventListener("keydown", (e) => {
 
                     innerContent.innerHTML += film.posterInfo
                 })
-
             })
-
     }
-
 });
 
+
+//Рендер фильмов после выбора категории
 let newArray = [];
-
 function posterSearchCategory() {
-
     innerContent.innerHTML = "";
     filmArray.map((film, index) => {
         if (film.genreIds.includes(+filterCategory.value)) {
@@ -81,10 +77,6 @@ function posterSearchCategory() {
         }
     });
 }
-
-
-
-
 
 buttCategory.addEventListener('click', () => {
     posterSearchCategory();

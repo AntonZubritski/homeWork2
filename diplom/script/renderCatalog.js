@@ -1,11 +1,8 @@
-
 let innerContent = document.getElementById("innerContent");
 let sideBar = document.getElementById("sidebar");
 let cartCount = [];
-let toggleEl = document.getElementById("toggleEl");
 
-
-
+//Добавить в корзину
 const btnActiveGood = () => {
     let btnGoods = document.querySelectorAll('.btnGoods');
     if (cartCountStorSplit !== 0){
@@ -19,11 +16,12 @@ const btnActiveGood = () => {
     }
 };
 
+//Удалить из корзины
 let btnClick = e => {
     let id = e.getAttribute('data-id');
     console.log(id);
 
-
+//Ищет класс 'active2', слайсит его из массива и перезаписывает local Storage
     if (e.classList.contains('active2')) {
         cartCount.map(function (el, index) {
             if(el === id) {
@@ -46,30 +44,25 @@ let btnClick = e => {
     console.log(cartCount);
 };
 
-
-
+// Рендер постеров(фильмов) на страницу через get 'posterInfo' => constructor.js
 function renderCat() {
 
     filmArray.map((film, key) =>{
         innerContent.innerHTML += film.posterInfo
     })
-
-
 }
-
+// Рендер  обратно в каталог и сносит модалку
 function catalogList() {
-
     if (innerContent !== null){
-        innerContent.innerHTML = "";
 
+        innerContent.innerHTML = "";
         renderCat();
         innerContent.classList.remove("modalCatalog");
         sideBar.style.display = "flex";
-
     }
 }
 
-// Promise
+// Promise // Ожидание запроса
 if (innerContent){
 
     new Promise( async function (resolve, reject) {
@@ -92,7 +85,7 @@ if (innerContent){
 }
 
 //---------------------------------Modal window
-
+//Отлавливает нужный data-id и рендерит модалку из filmArray[id] через конструктор и гет запрос modalInfo
 let index = (i) => {
     let treilerId = document.getElementById("treiler");
 
@@ -111,6 +104,7 @@ let index = (i) => {
 //---------------------------------Modal Coment
 //---------------------------------Coment END
 
+// Счетчик товаров и обновление // Проверка на запись в localStorage - что б не выкидывало ошибку
 if (localStorage.getItem('Key') !== null) {
     replaceCount();
 
@@ -121,7 +115,7 @@ if (localStorage.getItem('Key') !== null) {
     }
 }
 
+// Запуск счетчика из cart.js при загрузке
 window.onload = function(){
-
     counter();
 };

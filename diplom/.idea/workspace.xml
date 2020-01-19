@@ -65,6 +65,7 @@
       <workItem from="1579244906221" duration="28244000" />
       <workItem from="1579339838013" duration="25218000" />
       <workItem from="1579420283001" duration="8875000" />
+      <workItem from="1579458287690" duration="1641000" />
     </task>
     <servers />
   </component>
@@ -95,42 +96,42 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/script/renderCatalog.js</url>
-          <line>21</line>
+          <line>19</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/script/renderCatalog.js</url>
-          <line>8</line>
+          <line>5</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/script/renderCatalog.js</url>
-          <line>50</line>
+          <line>47</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/script/renderCatalog.js</url>
-          <line>59</line>
+          <line>54</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/script/cart.js</url>
-          <line>13</line>
+          <line>11</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/script/cart.js</url>
-          <line>55</line>
+          <line>53</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/script/renderCatalog.js</url>
-          <line>95</line>
+          <line>88</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/script/cart.js</url>
-          <line>80</line>
+          <line>78</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -150,7 +151,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/script/renderCatalog.js</url>
-          <line>76</line>
+          <line>69</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

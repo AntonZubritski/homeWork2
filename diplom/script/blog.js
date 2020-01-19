@@ -34,7 +34,7 @@ function renderNews() {
         innerNews.innerHTML += news.cardNews
     });
 }
-//Ожидание запроса перед рендером на страницу
+//Ожидание запроса-функции-fetch: jsonNews() перед рендером на страницу
 new Promise(  function (resolve, reject) {
         resolve(jsonNews());
 }).then(function () {
@@ -52,7 +52,7 @@ let prop = (i) => {
     bodyWrapper.classList.add('wrapBlog')
 };
 
-//Возвращает как было на страницу с новостями путем рендера
+//Возвращает как было на страницу с новостями путем отрисовки
 let backNews = () => {
     innerNews.innerHTML = "";
     renderNews();

@@ -1,6 +1,4 @@
 "use strict";
-
-
 let email2 = document.getElementById('email2');
 let password2 = document.getElementById('password2');
 let warningText2 = document.getElementById('warningText2');
@@ -11,9 +9,8 @@ let dataPersons = localStorage.getItem('dataPersons');
 let section = document.querySelectorAll('.tab-pane');
 
 
-
+//Если данные верны и совпали - переходим на User.html
 if (btnClickReg !== null) {
-
     btnClickReg.addEventListener('click', () => {
         for (let i in dataPersons) {
             if (email2.value === dataPersons[i].inputEmail && password2.value === dataPersons[i].inputPassword) {
@@ -27,7 +24,7 @@ if (btnClickReg !== null) {
 
 
 /*---------------------sign in/ to /registration-----------------------*/
-
+// Функция на переключение вкладок -  sign in/ to /registration
 navBtnSign.forEach(function(btnLi) {
 
     btnLi.addEventListener("click", function() {
@@ -57,6 +54,7 @@ function test() {
 
 
 /*---------------------Registration person-----------------------*/
+
 function getPerson() {
     dataPersons = JSON.parse(dataPersons);
 
@@ -105,6 +103,7 @@ if (btnPersonData !== null) {
         adminLogin();
     }
 }
+
 let buttUser = document.getElementById('buttUser');
  if (buttUser !== null) {
      if (dataPersons !== null) {
