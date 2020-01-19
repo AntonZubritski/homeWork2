@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MAGAZЫN</title>
+    <link rel="shortcut icon" href="./img/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          crossorigin="anonymous">
+</head>
+
+<body>
+
+<div id="body_wrapper">
+    <div id="wrapper" class="height93">
+
+        <div id="header">
+
+            <div id="site_title"><h1><a href="#" title="LOGO"></a></h1></div>
+            <div id="search_box">
+                <form action="#" method="get">
+                    <input type="text" value="Search" name="q" size="10" id="searchfield" title="searchfield" />
+                </form>
+            </div>
+
+        </div>
+
+        <nav class="clearfix">
+            <ul class="clearfix">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="authorization.html">LOG IN</a></li>
+                <li>
+                    <a href="cart.html" class="cart">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart:
+                        <span class="cart-color badge z-depth-1 mr-1" id="counter" data-qantity="0">0</span>
+                    </a>
+                </li>
+            </ul>
+            <a href="#" id="pull">Меню</a>
+        </nav>
+
+        <div class="container width-55 shadow">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="tab" role="tabpanel">
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs pl-3 pr-3 border-0" id="navBtnSign" role="tablist">
+                            <li role="presentation" class="active mr-5"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">Авторизация</a></li>
+                            <li role="presentation" class="mr-5"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">Регистрация</a></li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                            <!-- tab-content 1 -->
+                        <div class="tab-content tabs mt-3">
+                            <div role="tabpanel" class="tab-pane fade in active show" id="Section1">
+                                <form class="form-horizontal" id="formPersonData">
+                                    <div class="mb-1">
+                                        <label for="email2">Email</label>
+                                        <input type="email" id="email2" class=" form-control">
+                                    </div>
+                                    <div class="mb-1">
+                                        <label for="password2">Password</label>
+                                        <input type="password" id="password2" class=" form-control">
+                                    </div>
+                                    <!--<div id="warningText" class=""></div>-->
+                                    <div class="mb-1 mt-3">
+                                        <button type="submit" class="btn btnClickReg" id="btnClickReg">Войти</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- END tab-content2 -->
+
+                            <!-- tab-content 2 -->
+                            <div role="tabpanel" class="tab-pane fade" id="Section2">
+                                <form class="form-horizontal">
+                                    <div class="mb-1">
+                                        <label for="firstName">First Name</label>
+                                        <input type="text" class="form-control" id="firstName">
+                                    </div>
+                                    <div class="mb-1">
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName">
+                                    </div>
+                                    <div class="mb-1">
+                                        <label for="inputEmail2">Email address</label>
+                                        <input type="email" class="form-control" id="inputEmail2">
+                                    </div>
+                                    <div class="mb-1">
+                                        <label for="inputPassword2">Password</label>
+                                        <input type="password" class="form-control" id="inputPassword2">
+                                    </div>
+                                    <div class="mb-1">
+                                        <div id="warningText" class="red-text"></div>
+                                        <div id="warningText2" class="green-text"></div>
+                                        <button type="button" id="btnPersonData" class="btn">Зарегестрировать</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- END tab-content2 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div id="footer_wrapper">
+
+        <div id="footer">
+            Copyright © 2020 <a href="https://www.instagram.com/a.zubritski/">a.zubritski</a>
+
+            <div class="pb-4">
+                <a href="#"><i class="fa fa-vk ico"></i></a>
+                <a href="#"><i class="fa fa-facebook ico"></i></a>
+                <a href="#"><i class="fa fa-twitter ico"></i></a>
+                <a href="#"><i class="fa fa-youtube ico"></i></a>
+                <a href="#"><i class="fa fa-telegram ico"></i></a>
+                <a href="#"><i class="fa fa-instagram ico"></i></a>
+                <a href="#">
+                    <i class="fa fa-github ico"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script/renderCatalog.js"></script>
+
+<script src="script/constructor.js"></script>
+<script src="script/registration.js"></script>
+
+</body>
+</html>
